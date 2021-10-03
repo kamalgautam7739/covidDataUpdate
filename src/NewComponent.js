@@ -60,10 +60,10 @@ export default class NewComponent extends Component {
 
   render() {
     return (
-        <div>
-        <div  style={{width:"80vw", margin:"auto"}}>
+        <div><h1 style={{width:"80vw", margin:"auto",marginBottom:"10px", textAlign:"center"}}>COVID-19 Statistics</h1>
+        <div  style={{width:"80vw", margin:"auto", marginBottom:"10px", textAlign:"center"}}>
             <label htmlFor="search">Search </label>
-            <input type="text" onChange={this.searchFunction}/>
+            <input type="text" placeHolder="Country" onChange={this.searchFunction}/>
         </div>
       <div>
         {this.state.error ? (

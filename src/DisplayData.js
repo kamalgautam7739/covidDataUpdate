@@ -19,52 +19,17 @@ export default class DisplayData extends Component {
                     </tr>
                 </thead>
                     <tbody>
-                    <tr>
-                       <td> {this.props.data.map((element,i)=>
-                        <div>
-                        {i+1}
-                        </div>)}</td>
-                        <td>
-                        {this.props.data.map((element,i)=>
-                        <div>
-                           {element.country?element.country:"-"}</div>
-                        )}</td>
-                        <td>
-                        {this.props.data.map((element,i)=>
-                        <div>
-                           {element.cases?element.cases:"-"}</div>
-                        )}</td>
-                        <td>
-                        {this.props.data.map((element,i)=>
-                        <div>
-                           {element.todayCases?element.todayCases:"-"}</div>
-                        )}</td>
-                        <td style={{color:"red"}}>
-                        {this.props.data.map((element,i)=>
-                        <div>
-                           {element.deaths?element.deaths:"-"}</div>
-                        )}</td>
-                        <td style={{color:"red"}}>
-                        {this.props.data.map((element,i)=>
-                        <div>
-                           {element.todayDeaths?element.todayDeaths:"-"}</div>
-                        )}</td>
-                        <td style={{color:"rgb(32, 253, 2)"}}>
-                        {this.props.data.map((element,i)=>
-                        <div>
-                           {element.recovered?element.recovered:"-"}</div>
-                        )}</td>
-                        <td>
-                        {this.props.data.map((element,i)=>
-                        <div>
-                           {element.active?element.active:"-"}</div>
-                        )}</td>
-                        <td>
-                        {this.props.data.map((element,i)=>
-                        <div>
-                           {element.critical?element.critical:"-"}</div>
-                        )}</td>
-                    </tr>
+                     {this.props.data.map((element,i)=>
+                       <tr> <td>{i+1}</td>
+                        <td>{element.country}</td>
+                        <td>{element.cases}</td>
+                        <td>{element.todayCases}</td>
+                        <td  style={{backgroundColor:"red"}}>{element.deaths}</td>
+                        <td  style={{backgroundColor:"red"}}>{element.todayDeaths}</td>
+                        <td  style={{backgroundColor:"rgb(126, 236, 116)"}}>{element.recovered}</td>
+                        <td>{element.active}</td>
+                        <td>{element.critical}</td>
+                        </tr>)}
                     </tbody>
                 </table>
                 
